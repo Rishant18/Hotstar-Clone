@@ -3,8 +3,9 @@ import React from 'react'
 function Herobanner() {
     return (
         <section
-        className=" w-screen h-[90vh] bg-contain bg-center bg-no-repeat flex items-end"
+        className=" w-screen h-[90vh] bg-contain bg-center bg-no-repeat flex items-end "
           style={{
+            
         backgroundImage:
       "url('https://i.pinimg.com/736x/ef/93/36/ef933636aeb7dbcc75b5df74d68ef032.jpg')",
   }}

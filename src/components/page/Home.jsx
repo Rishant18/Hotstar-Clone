@@ -6,7 +6,7 @@ import Movierow from "../row/Movierow";
 
 function Home() {
   return (
-    <div className=" flex bg-black min-h-screen overflow-x-hidden">
+    <div className="bg-[#0a0c16] flex min-h-screen overflow-x-hidden">
       
 
       <div className=" flex-1 ml-20">
@@ -16,6 +16,7 @@ function Home() {
          <Movierow title="Sports" />
          <Movierow title="New Releases" />
        
+       <footer/>
       </div>
     </div>
   );
