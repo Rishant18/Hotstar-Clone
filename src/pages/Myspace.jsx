@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 function Myspace() {
     return (
             <>
@@ -19,12 +19,12 @@ function Myspace() {
             src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_640/feature/myspace/my_space_login_in_jv.png" alt="logo" />
             <h2 className='text-4xl'>Login to Hotstar</h2>
             <p className=' opacity-60'>Start watching from where you left, personalise for kids and more</p>
+            <Link to="/Loginpage">
              <button 
-             onClick={{ }}
-             className="px-20 py-3 text-xl bg-linear-to-r from-blue-500 to-purple-500 text-white font-bold rounded-full transition-transform transform-gpu hover:shadow-lg cursor-pointer ">
+             className="px-20 py-3 text-xl bg-linear-to-r from-blue-500 to-purple-500 text-white font-bold rounded-full transition-transform transform-gpu hover:shadow-lg hover:scale-105 cursor-pointer ">
              Log In
              </button>
-
+             </Link>
         </div>
         </>
     )

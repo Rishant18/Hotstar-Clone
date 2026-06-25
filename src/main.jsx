@@ -12,6 +12,8 @@ import Movies from './pages/Movies'
 import Sports from './pages/Sports'
 import Myspace from './pages/Myspace'
 import Categories from './pages/Categories'
+import Loginpage from './components/Loginpage'
+import MovieDetails from './data/Moviedetail'
 import './index.css'
 
 
@@ -25,6 +27,9 @@ const router = createBrowserRouter(
       <Route path='Sports' element={<Sports />} />
       <Route path='Categories' element={<Categories/>}/>
       <Route path='Myspace' element={<Myspace />} />
+      <Route path='Loginpage' element={<Loginpage />} />
+      <Route path="/movie/:id" element={<MovieDetails />} />
+
     </Route>
   )
 )

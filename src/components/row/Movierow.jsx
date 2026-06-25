@@ -1,11 +1,8 @@
 import React ,{useRef}from 'react'
 import Moviecard from "../card/Moviecard";
-import Data from "../../data/Data";
 
-
-function Movierow({ title }) {
+function Movierow({ title,movies}) {
   const rowRef = useRef(null);
-   
 
   const scrollLeft = () => {
     rowRef.current.scrollBy({
@@ -20,8 +17,9 @@ function Movierow({ title }) {
       behavior: "smooth",
     });
   };
+
   return (
-    <div className="px-6 py-4 text-white w-full">
+    <div className="px-6 py-4 text-white w-full overflow-auto scrollbar-none">
       <h2 className="text-2xl font-bold mb-4">
         {title}
       </h2>
@@ -32,17 +30,18 @@ function Movierow({ title }) {
         </button>
         <div 
         ref={rowRef}
-        className="scrollbar-hide ">
+        className="overflow-auto scrollbar-none ">
          <div className="flex gap-4">
-            {Data.map((movie) => (
+            {movies.map((movie) => (
               <Moviecard
                key={movie.id}
-              image={movie.image}
+               image={movie.image?.medium}
+               title={movie.name}
            />
           ))}
         </div>
         </div>
-        <button onClick={scrollRight} className="bg-gray-800 hover:bg-gray-600 text-white p-2 rounded-full ml-2 ">
+        <button onClick={scrollRight} className="bg-gray-800 hover:bg-gray-600 text-white p-2 rounded-full ml-2 mr-96 ">
           <i className  ="fa-solid fa-angle-right"></i>
         </button>
       </div>

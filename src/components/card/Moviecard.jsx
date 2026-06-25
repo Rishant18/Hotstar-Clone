@@ -1,16 +1,15 @@
 import React from "react";
-import Data from "../../data/Data";
-function Moviecard({image}) {
+
+function MovieCard({ image, title }) {
   return (
-    <div className="min-w-45 h-65 bg-gray-800 rounded-lg scroll-m-1 hover:scale-105 transition duration-300 cursor-pointer">
-    <img 
-    src={image}
-    alt="Movie Poster"
-    className="w-full h-full object-cover "
-    />
-    
+    <div className="w-40 cursor-pointer hover:scale-105 transition  duration-300">
+      <img
+        src={image}
+        alt={title}
+        className="w-full h-60 object-cover rounded-xl"
+      />
+      <p className="text-white mt-2 text-sm">{title}</p>
     </div>
   );
 }
-
-export default Moviecard;
+export default MovieCard
