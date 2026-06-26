@@ -2,7 +2,7 @@ import React from "react";
 
 function MovieCard({ image, title }) {
   return (
-    <div className="w-40 cursor-pointer hover:scale-105 transition  duration-300">
+    <div className="w-40 cursor-pointer  shrink-0 hover:scale-105 transition  duration-300">
       <img
         src={image}
         alt={title}

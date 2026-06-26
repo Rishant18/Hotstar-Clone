@@ -1,23 +1,43 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 
 function Herobanner() {
+   const [show, setShow] = useState(null);
+
+  useEffect(() => {
+    fetch("https://api.tvmaze.com/shows")
+      .then((res) => res.json())
+      .then((data) => {
+        const randomShow = data[Math.floor(Math.random() * 50)];
+        setShow(randomShow);
+      });
+  }, []);
+
+  if (!show) {
     return (
+      <div className="h-[70vh] bg-gray-900 animate-pulse"></div>
+    );
+  }
+    return (
+
         <section
-        className=" w-screen h-[90vh] bg-contain bg-center bg-no-repeat flex items-end "
+        className=" w-screen h-[90vh] bg-contain bg-center bg-no-repeat flex items-end pl-12 "
           style={{
             
         backgroundImage:
-      "url('https://i.pinimg.com/736x/ef/93/36/ef933636aeb7dbcc75b5df74d68ef032.jpg')",
+       `url(${show.image?.original || show.image?.medium})`,
   }}
 >
   <div>
     <h1 className="text-2xl font-bold mb-4 text-white opacity-70">
-      Deadpool & Wolverine
+     {show.name}
     </h1>
+     <p className="text-gray-300 mt-4 max-w-2xl line-clamp-3">
+  {show.summary?.replace(/<[^>]*>/g, "")}
+     </p>
 
-    <button className="px-15 py-4 bg-linear-to-r from-blue-500 to-purple-500 text-white font-bold rounded-full transition-transform transform-gpu hover:shadow-lg">
-      Watch Now
-    </button>
+    <button className="mt-6 px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition">
+  ▶ Watch Now
+</button>
   </div>
 </section>
     )

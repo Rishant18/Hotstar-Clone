@@ -27,7 +27,9 @@ function Home() {
        
        <footer/>
       </div>
+      
     </div>
+    
   );
 }
 
