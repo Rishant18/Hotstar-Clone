@@ -27,7 +27,7 @@ function SearchBar() {
   return (
 <>
     <div className="w-full flex justify-center py-6">
-      <div className="relative w-125">
+      <div className="relative w-[95%] max-w-xl">
         
         <i className="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
 

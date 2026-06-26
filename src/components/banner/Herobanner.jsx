@@ -22,7 +22,7 @@ function Herobanner() {
 
   if (!shows.length) {
     return (
-      <div className="w-full h-[75vh] bg-[#0a0c16] animate-pulse"></div>
+      <div className="relative w-full min-h-[60vh] md:h-[75vh] bg-[#0a0c16] animate-pulse"></div>
     );
   }
 
@@ -50,19 +50,19 @@ function Herobanner() {
       <div className="absolute inset-0 bg-linear-to-r from-black via-black/70 to-transparent"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex items-center h-full px-16">
+      <div className="relative z-10 flex items-center h-full px-4 md:px-16">
 
         <div className="max-w-xl">
 
-          <h1 className="text-6xl font-bold text-white">
+          <h1 className="text-3xl md:text-6xl font-bold text-white">
             {show.name}
           </h1>
 
-          <p className="mt-5 text-gray-300 line-clamp-4 text-lg">
+          <p className="mt-5 text-gray-300 line-clamp-4 text-sm md:text-lg">
             {show.summary?.replace(/<[^>]*>/g, "")}
           </p>
 
-          <button className="mt-8 px-8 py-3 bg-blue-600 rounded-xl text-white hover:bg-blue-500 transition">
+          <button className="mt-8 px-6 py-2 md:px-8 md:py-3 bg-blue-600 rounded-xl text-white hover:bg-blue-500 transition">
             ▶ Watch Now
           </button>
 

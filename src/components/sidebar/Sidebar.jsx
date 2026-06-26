@@ -8,7 +8,7 @@ function Sidebar() {
 
   return (
     <div
-      className={`fixed left-0 top-0 h-screen  text-white transition-all duration-600 z-50 pl-7 ${
+     className={`hidden md:flex fixed left-0 top-0 h-screen bg-[#0a0c16]/90 backdrop-blur-md text-white transition-all duration-300 z-50 pl-7 ${
         open ? "w-52 opacity-100 translate-x-0" : "w-16"
       }`}
       onMouseEnter={() => setOpen(true)}

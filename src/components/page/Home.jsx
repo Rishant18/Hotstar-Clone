@@ -22,7 +22,7 @@ function Home() {
     <div className="bg-[#0a0c16] flex min-h-screen   overflow-x-hidden">
       
 
-      <div className=" flex-1 ml-20">
+      <div className=" flex-1 ml-0 md:ml-20">
         <Herobanner />
          <Movierow onMovieClick={setSelectedMovie} title="Trending Now"  movies={movies.slice(0,20)}/>
          <Movierow onMovieClick={setSelectedMovie} title="Top 10 in India" movies={movies.slice(80,100)} />
@@ -35,28 +35,28 @@ function Home() {
       {selectedMovie && (
   <div
   className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+  onClick={() => setSelectedMovie(null)}
 >
     <div
-         className="bg-[#1b1f2b] rounded-2xl p-6 w-full max-w-md max-h-[90vh] overflow-y-auto"
-       >
-      onClick={(e) => e.stopPropagation()}
-    
+       className="bg-[#1b1f2b] rounded-2xl p-4 md:p-6 w-full max-w-md max-h-[90vh] overflow-y-auto"
+        onClick={(e) => e.stopPropagation()}
+>
       <img
         src={selectedMovie.image?.original || selectedMovie.image?.medium}
         alt={selectedMovie.name}
-        className="w-full h-72 object-cover rounded-xl"
+        className="w-full h-56 md:h-72 object-cover rounded-xl"
       />
 
-      <h2 className="text-white text-3xl font-bold mt-4">
+      <h2 className="text-white text-2xl md:text-3xl font-bold mt-4">
         {selectedMovie.name}
       </h2>
 
-      <p className="text-gray-400 mt-3 line-clamp-5">
+      <p className="text-gray-400 text-sm md:text-base mt-3 line-clamp-5">
         {selectedMovie.summary?.replace(/<[^>]*>/g, "")}
       </p>
 
       <button
-        className="mt-5 bg-blue-600 px-6 py-2 rounded-lg text-white"
+       className="mt-5 w-full md:w-auto bg-blue-600 px-6 py-3 rounded-lg text-white hover:bg-blue-500"
         onClick={() => setSelectedMovie(null)}
       >
         Close
