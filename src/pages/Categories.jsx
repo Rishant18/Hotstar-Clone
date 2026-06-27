@@ -25,7 +25,7 @@ function Categories() {
     "Kannada",
     "Malayalam",
   ];
-  
+
   const PopularGenres = [
     "Romance",
     "Drama",
@@ -85,7 +85,7 @@ function Categories() {
         ))}
       </div>
 
-       {/* popular generes */}
+      {/* popular generes */}
       <h2 className="text-xl font-bold mb-4 pt-10">Popular Genres</h2>
 
       <div className="flex gap-4  overflow-x-auto mb-10 scrollbar-none ">

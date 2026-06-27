@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 function TV() {
   const [shows, setShows] = useState([]);
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("https://api.tvmaze.com/shows")

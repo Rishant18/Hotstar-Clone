@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 function TV() {
   const [shows, setShows] = useState([]);
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("https://api.tvmaze.com/shows")
@@ -14,7 +14,7 @@ function TV() {
   return (
     <div className="bg-black min-h-screen p-6 pl-30">
       <h1 className="text-white text-4xl font-bold mb-8">
-       Sports
+        Sports
       </h1>
 
       <div className="grid grid-cols-7 gap-4">

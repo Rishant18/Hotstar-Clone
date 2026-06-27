@@ -38,7 +38,7 @@ function Herobanner() {
 
   return (
     <section className="relative w-full h-[75vh] overflow-hidden">
-
+        
       {/* Background Image */}
       <img
         src={show.image?.original || show.image?.medium}
@@ -62,7 +62,8 @@ function Herobanner() {
             {show.summary?.replace(/<[^>]*>/g, "")}
           </p>
 
-          <button className="mt-8 px-6 py-2 md:px-8 md:py-3 bg-blue-600 rounded-xl text-white hover:bg-blue-500 transition">
+          <button 
+          className="mt-8 px-6 py-2 md:px-8 md:py-3 bg-blue-600 rounded-xl text-white hover:bg-blue-500 transition">
             ▶ Watch Now
           </button>
 
@@ -71,9 +72,8 @@ function Herobanner() {
             {shows.map((_, index) => (
               <div
                 key={index}
-                className={`h-2 w-8 rounded-full transition ${
-                  index === current ? "bg-white" : "bg-gray-500"
-                }`}
+                className={`h-2 w-8 rounded-full transition ${index === current ? "bg-white" : "bg-gray-500"
+                  }`}
               ></div>
             ))}
           </div>

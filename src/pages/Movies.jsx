@@ -18,7 +18,7 @@ function Movies() {
       </h1>
 
       <div className="grid grid-cols-7 gap-4">
-        
+
         {movies.map((movie) => (
           <div
             key={movie.id}
